@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanggar Rias Lintang | Jasa Rias Pengantin Adat & Modern Eksklusif</title>
+    
+    <!-- Google Fonts: Cormorant Garamond & Playfair Display (Serif Mewah) + Plus Jakarta Sans (Sans-serif Bersih) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 CDN untuk Ikon Elegan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: {
+                            50: '#FBF9F5',
+                            100: '#F4EFE6',
+                            200: '#EBE2D3',
+                            300: '#DFD1BA',
+                        },
+                        gold: {
+                            400: '#D4B26A',
+                            500: '#C5A059',
+                            600: '#B08D44',
+                            700: '#8C6D2E',
+                        },
+                        maroon: {
+                            800: '#4A2521',
+                            900: '#3E2723',
+                            950: '#2C1E16',
+                        },
+                        espresso: {
+                            700: '#4E382C',
+                            800: '#3B281E',
+                            900: '#2C1E16',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'luxury': '0 14px 42px -10px rgba(44, 30, 22, 0.16)',
+                        'gold-glow': '0 8px 25px -5px rgba(197, 160, 89, 0.38)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Kustomisasi Scrollbar & Animasi Halus */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6EE;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C59B27;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #856014;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #9E761B 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #B0861E 100%);
+        }
+
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #C59B27 0%, #8E6914 100%);
+        }
+
+        .ornament-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .ornament-divider::before,
+        .ornament-divider::after {
+            content: "";
+            height: 1px;
+            width: 60px;
+            background: linear-gradient(90deg, transparent, #C59B27, transparent);
+        }
+
+        /* Animasi Toast Notifikasi */
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .toast-enter {
+            animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-ivory-50 text-espresso-900 font-sans antialiased selection:bg-gold-500 selection:text-white overflow-x-hidden">
+
+    <!-- ==================== 1. HEADER & NAVIGASI ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-ivory-50/90 backdrop-blur-md border-b border-ivory-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Brand -->
+                <a href="#beranda" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-maroon-900 border-2 border-gold-400 flex items-center justify-center text-gold-400 shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-crown text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-maroon-900 block leading-none">
+                            Sanggar Rias <span class="text-gold-600">Lintang</span>
+                        </span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-espresso-700 font-medium">
+                            Bridal & Traditional Wedding
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#beranda" class="text-sm font-medium text-espresso-800 hover:text-gold-600 transition-colors">Beranda</a>
+                    <a href="#galeri" class="text-sm font-medium text-espresso-800 hover:text-gold-600 transition-colors">Galeri Adat Jawa</a>
+                    <a href="#kontak" class="text-sm font-medium text-espresso-800 hover:text-gold-600 transition-colors">Hubungi Kami</a>
+                </nav>
+
+                <!-- Action Buttons (Booking & Mobile Menu) -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Tombol Booking -->
+                    <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20melakukan%20booking%20rias%20pengantin." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full gold-gradient-bg text-maroon-950 hover:scale-[1.03] text-xs sm:text-sm font-bold shadow-gold-glow transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Booking</span>
+                    </a>
+
+                    <!-- Hamburger Button Mobile -->
+                    <button onclick="toggleMobileMenu()" 
+                            aria-label="Menu Navigasi"
+                            class="lg:hidden p-2.5 rounded-xl text-maroon-900 hover:bg-ivory-200 transition-colors">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-ivory-50 border-b border-ivory-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+            <a href="#beranda" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-espresso-900 hover:bg-ivory-200">Beranda</a>
+            <a href="#galeri" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-espresso-900 hover:bg-ivory-200">Galeri Adat Jawa</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-espresso-900 hover:bg-ivory-200">Hubungi Kami</a>
+            <div class="pt-2 px-4">
+                <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20melakukan%20booking%20rias%20pengantin." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   onclick="toggleMobileMenu()" 
+                   class="w-full flex items-center justify-center gap-2 py-3 rounded-xl gold-gradient-bg text-maroon-950 font-bold text-sm shadow">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Booking Sekarang</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="beranda" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Dekorasi Latar Belakang Halus -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold-400/10 blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-maroon-800/10 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Kolom Kiri: Copywriting Persuasif -->
+                <div class="lg:col-span-6 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ivory-200/80 border border-gold-400/40 text-maroon-900 text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-sparkles text-gold-600"></i>
+                        <span>Tata Rias Pengantin Adat Jawa & Modern Terpercaya</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-maroon-950 leading-[1.15]">
+                        Wujudkan Pesona Anggun di <span class="gold-gradient-text italic">Hari Bahagia</span> Anda
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-espresso-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Sentuhan riasan halus, mewah, dan tahan lama yang memancarkan kecantikan alami Anda. Spesialis tata rias pengantin adat Jawa klasik—dari keagungan Paes Ageng, Solo Putri, hingga Solo Basahan yang menyempurnakan momen sakral Anda.
+                    </p>
+
+                    <!-- Tombol Aksi Utama Booking Langsung ke WhatsApp -->
+                    <div class="pt-1 flex justify-center lg:justify-start">
+                        <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20melakukan%20booking%20rias%20pengantin." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full gold-gradient-bg text-maroon-950 font-bold text-sm sm:text-base shadow-gold-glow hover:scale-105 transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Booking</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Metrics -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-ivory-200 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-maroon-900">500+</p>
+                            <p class="text-xs text-espresso-700">Pasangan Pengantin</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-maroon-900">4.9/5</p>
+                            <p class="text-xs text-espresso-700">Rating Kepuasan</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-maroon-900">8+ Thn</p>
+                            <p class="text-xs text-espresso-700">Pengalaman MUA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Visual Bingkai Mewah Pakaian Adat Jawa Pengantin (SIGNATURE LOOK) -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-full">
+                        <!-- Bingkai Arch / Lengkungan Estetis -->
+                        <div class="relative rounded-t-[160px] rounded-b-3xl overflow-hidden border-4 border-gold-400/70 shadow-2xl bg-maroon-950 aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=85" 
+                                 alt="Keagungan Pakaian Adat Jawa Pengantin - Sanggar Rias Lintang"
+                                 onerror="this.onerror=null; this.style.display='none'; document.getElementById('javanese-bride-svg-fallback').classList.remove('hidden');"
+                                 class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Ilustrasi SVG Pakaian Adat Pengantin Jawa (Fallback / Pendukung Estetis) -->
+                                 class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                            
+                            <!-- Canvas Potret Realistis Berlapis (Fallback Otomatis jika file lokal tidak tersedia di sandbox) -->
+                            <canvas id="signature-portrait-canvas" class="hidden w-full h-full object-cover"></canvas>
+
+                            <!-- Input & Tombol Kecil di Pojok Kanan Atas untuk Memuat / Mengganti Foto JPG Secara Instan -->
+                            <input type="file" id="signature-photo-input" accept="image/*" class="hidden" onchange="handleSignaturePhotoUpload(event)">
+                            <button type="button"
+                                    onclick="document.getElementById('signature-photo-input').click()"
+                                    title="Ganti / Muat Foto JPG"
+                                    class="absolute top-4 right-4 z-20 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-maroon-950/75 hover:bg-maroon-900 text-ivory-50 border border-gold-400/50 backdrop-blur-md text-[11px] font-medium shadow-md transition-all opacity-90 hover:opacity-100">
+                                <i class="fa-solid fa-camera text-gold-400"></i>
+                                <span>Ganti Foto</span>
+                            </button>
+
+                            <!-- Gradasi Gelap Lembut Hanya di Bagian Bawah agar Foto Tetap Terang & Jelas -->
+                            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-maroon-950/90 via-maroon-950/45 to-transparent pointer-events-none"></div>
+                            
+                            <!-- Label Caption di Bagian Bawah dalam Kartu -->
+                            <div class="absolute bottom-6 left-6 right-6 text-ivory-50 pointer-events-none">
+                                <span class="inline-block text-[11px] uppercase tracking-[0.25em] text-gold-400 font-bold mb-1.5">
+                                    SIGNATURE LOOK
+                                </span>
+                                <h2 class="font-serif text-xl sm:text-2xl font-bold leading-snug text-white drop-shadow-sm">
+                                    Keagungan Pakaian Adat Jawa Pengantin
+                                </h2>
+                                <p class="text-xs text-ivory-200/85 mt-1">
+                                    Kebaya Beludru Hitam Sulaman Emas, Paes &amp; Cunduk Mentul
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge Kiri Bawah -->
+                        <div class="hidden sm:flex items-center gap-3 bg-ivory-50/95 backdrop-blur-md p-3.5 rounded-2xl shadow-luxury border border-gold-400/45 absolute -bottom-5 -left-6 max-w-xs z-20">
+                            <div class="w-11 h-11 rounded-xl bg-maroon-950 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                                <i class="fa-solid fa-gem text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-maroon-950">Busana Adat Jawa Eksklusif</p>
+                                <p class="text-[11px] text-espresso-700">Kebaya Beludru, Beskap &amp; Ronce Melati</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. GALERI PORTOFOLIO PENGANTIN ADAT JAWA ==================== -->
+    <section id="galeri" class="py-20 sm:py-24 bg-ivory-100 border-y border-ivory-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold-600">Koleksi Eksklusif Adat Jawa</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-maroon-950">
+                    Pesona Pengantin Adat Jawa
+                </h2>
+                <div class="ornament-divider">
+                    <i class="fa-solid fa-diamond text-xs text-gold-500"></i>
+                </div>
+                <p class="text-sm sm:text-base text-espresso-700">
+                    Keanggunan pakem tata rias dan busana pengantin Adat Jawa karya Sanggar Rias Lintang. Klik foto untuk memperbesar tampilan.
+                </p>
+            </div>
+
+            <!-- Grid Galeri Khusus Adat Jawa -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item galeri dirender lewat JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. ORDER NOW SECTION (LANGSUNG KE WHATSAPP) ==================== -->
+    <section id="order-now" class="py-20 sm:py-24 bg-maroon-950 text-ivory-50 relative overflow-hidden">
+        <!-- Dekorasi Cahaya Emas -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-20 left-1/4 w-96 h-96 rounded-full bg-gold-500/10 blur-3xl"></div>
+            <div class="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full bg-gold-400/10 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-maroon-900 border border-gold-400/40 text-gold-400 text-xs font-bold uppercase tracking-[0.2em]">
+                <i class="fa-solid fa-crown"></i>
+                <span>Reservasi Jadwal Pernikahan</span>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory-50 leading-tight">
+                Siap Tampil Memukau di <span class="text-gold-400 italic">Hari Istimewa</span> Anda?
+            </h2>
+
+            <p class="text-sm sm:text-lg text-ivory-200/85 max-w-2xl mx-auto leading-relaxed">
+                Kunci tanggal acara pernikahan Anda sekarang bersama tim perias profesional <strong>Sanggar Rias Lintang</strong>. Hubungi kami langsung melalui WhatsApp untuk cek ketersediaan jadwal.
+            </p>
+
+            <div class="pt-4">
+                <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20order%20jasa%20rias%20pengantin%20adat%20Jawa%20sekarang." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-3 px-10 py-4 sm:py-5 rounded-full gold-gradient-bg text-maroon-950 font-bold text-base sm:text-lg shadow-gold-glow hover:scale-105 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Order Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. FOOTER LENGKAP ==================== -->
+    <footer id="kontak" class="bg-espresso-900 text-ivory-200 pt-16 pb-10 border-t border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-ivory-200/10">
+                
+                <!-- Kolom 1: Brand & Deskripsi -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-maroon-900 border border-gold-400 flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-ivory-50">
+                            Sanggar Rias <span class="text-gold-400">Lintang</span>
+                        </span>
+                    </div>
+                    <p class="text-sm text-ivory-200/75 leading-relaxed">
+                        Mitra terpercaya dalam merangkai keindahan tata rias pengantin adat Jawa maupun modern serta penyewaan busana pernikahan eksklusif di Indonesia.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-espresso-800 hover:bg-gold-500 hover:text-maroon-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-10 h-10 rounded-full bg-espresso-800 hover:bg-gold-500 hover:text-maroon-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-tiktok text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20menanyakan%20informasi%20booking%20rias%20pengantin%20adat%20Jawa." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Booking" class="w-10 h-10 rounded-full bg-espresso-800 hover:bg-gold-500 hover:text-maroon-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Tautan Cepat -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#beranda" class="hover:text-gold-400 transition-colors">Beranda</a></li>
+                        <li><a href="#galeri" class="hover:text-gold-400 transition-colors">Galeri Pengantin Adat Jawa</a></li>
+                        <li><a href="#order-now" class="hover:text-gold-400 transition-colors">Order Now</a></li>
+                        <li><a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20menanyakan%20informasi%20booking%20rias%20pengantin%20adat%20Jawa." target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors">Booking via WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Jam Operasional -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mb-4">Jam Operasional Studio</h4>
+                    <ul class="space-y-2.5 text-sm text-ivory-200/80">
+                        <li class="flex justify-between">
+                            <span>Senin - Jumat:</span>
+                            <span class="font-medium text-ivory-50">09.00 - 19.00 WIB</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu - Minggu:</span>
+                            <span class="font-medium text-ivory-50">08.00 - 20.00 WIB</span>
+                        </li>
+                        <li class="pt-2 text-xs text-gold-400/90">
+                            *Layanan Rias Acara (On-Location) menyesuaikan jadwal akad/resepsi klien (24 Jam).
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4: Kontak & Alamat -->
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-sm text-ivory-200/80">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                            <span>Tabet RT4/RW1, Kec. Limbangan, Kab. Kendal, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-gold-400"></i>
+                            <a href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20menanyakan%20informasi%20booking%20rias%20pengantin%20adat%20Jawa." target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors">081226250628</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-regular fa-envelope text-gold-400"></i>
+                            <a href="mailto:sanggarlintang26@gmail.com" class="hover:text-gold-400 transition-colors">sanggarlintang26@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory-200/60 gap-4">
+                <p>&copy; 2026 Sanggar Rias Lintang. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p>Dirancang dengan cinta untuk hari bahagia pernikahan Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== LIGHTBOX GALERI PENGANTIN ==================== -->
+    <div id="lightbox-modal" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+        <button onclick="closeLightbox()" aria-label="Tutup Lightbox" class="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div onclick="event.stopPropagation()" class="max-w-3xl w-full text-center space-y-4">
+            <img id="lightbox-img" src="" alt="Preview Riasan" class="max-h-[75vh] mx-auto rounded-2xl border-2 border-gold-400 shadow-2xl object-contain">
+            <div class="space-y-3">
+                <div>
+                    <span id="lightbox-cat" class="text-xs uppercase tracking-widest text-gold-400 font-semibold"></span>
+                    <h3 id="lightbox-title" class="font-serif text-2xl text-white font-bold"></h3>
+                </div>
+                <a id="lightbox-wa-link" 
+                   href="https://wa.me/6281226250628?text=Halo%20Sanggar%20Rias%20Lintang,%20saya%20ingin%20menanyakan%20informasi%20booking%20rias%20pengantin%20adat%20Jawa." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full gold-gradient-bg text-maroon-950 font-bold text-xs sm:text-sm shadow">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Booking Gaya Ini</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIKA INTERAKTIVITAS ==================== -->
+    <script>
+        // PENANGANAN FOTO SIGNATURE LOOK (LOCALSTORAGE + MULTI-PATH FALLBACK + REALISTIC CANVAS RENDER)
+        const SIGNATURE_STORAGE_KEY = 'sanggar_lintang_signature_photo_v1';
+        const signatureFallbackPaths = [
+            'images (4)_3.jpg',
+            'images%20(4)_3.jpg',
+            'images (4)_2.jpg',
+            'images (4).jpg'
+        ];
+        let signatureFallbackIndex = 0;
+
+        function handleSignatureImgError(imgEl) {
+            signatureFallbackIndex++;
+            if (signatureFallbackIndex < signatureFallbackPaths.length) {
+                imgEl.src = signatureFallbackPaths[signatureFallbackIndex];
+                return;
+            }
+            // Jika file JPG eksternal belum diunggah ke folder sandbox, tampilkan potret realistis berlapis pada canvas
+            imgEl.classList.add('hidden');
+            const canvas = document.getElementById('signature-portrait-canvas');
+            if (canvas) {
+                canvas.classList.remove('hidden');
+                renderJavaneseBridalPortraitCanvas(canvas);
+            }
+        }
+
+        function handleSignaturePhotoUpload(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataUrl = e.target.result;
+                const imgEl = document.getElementById('signature-look-img');
+                const canvas = document.getElementById('signature-portrait-canvas');
+                if (imgEl) {
+                    imgEl.onerror = null;
+                    imgEl.src = dataUrl;
+                    imgEl.classList.remove('hidden');
+                }
+                if (canvas) {
+                    canvas.classList.add('hidden');
+                }
+                try {
+                    localStorage.setItem(SIGNATURE_STORAGE_KEY, dataUrl);
+                } catch (err) {
+                    // Abaikan jika kapasitas localStorage terbatas
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Render Potret Pasangan Pengantin Jawa (Pria di kiri berbeskap beludru & blangkon, Wanita di kanan berkebaya beludru, paes & 7 cunduk mentul di koridor hangat)
+        function renderJavaneseBridalPortraitCanvas(canvas) {
+            const w = 600;
+            const h = 800;
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext('2d');
+
+            // 1. Latar Koridor Arsitektur Batu & Pilar Hangat Cokelat Keemasan
+            const bgGrad = ctx.createLinearGradient(0, 0, w, h);
+            bgGrad.addColorStop(0, '#5C4332');
+            bgGrad.addColorStop(0.45, '#7A5B43');
+            bgGrad.addColorStop(1, '#3D291E');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, w, h);
+
+            // Pilar arsitektur lembut di latar belakang
+            const pillarGrad = ctx.createLinearGradient(250, 0, 490, 0);
+            pillarGrad.addColorStop(0, 'rgba(150, 118, 86, 0.55)');
+            pillarGrad.addColorStop(0.6, 'rgba(116, 87, 61, 0.7)');
+            pillarGrad.addColorStop(1, 'rgba(62, 42, 29, 0.85)');
+            ctx.fillStyle = pillarGrad;
+            ctx.fillRect(265, 30, 215, 650);
+
+            // Lantai terakota hangat perspektif bawah
+            ctx.fillStyle = '#4A261B';
+            ctx.fillRect(0, 660, w, 140);
+            ctx.strokeStyle = 'rgba(28, 15, 10, 0.45)';
+            ctx.lineWidth = 2;
+            for (let y = 675; y < 800; y += 26) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(w, y);
+                ctx.stroke();
+            }
+
+            // Cahaya hangat menyinari pasangan pengantin
+            const glow = ctx.createRadialGradient(295, 360, 30, 295, 380, 330);
+            glow.addColorStop(0, 'rgba(255, 224, 178, 0.28)');
+            glow.addColorStop(1, 'rgba(255, 224, 178, 0)');
+            ctx.fillStyle = glow;
+            ctx.fillRect(0, 0, w, h);
+
+            // 2. MEMPELAI PRIA (Kiri, menghadap kanan tersenyum)
+            // Jarik Batik Sogan Pria
+            const jarikGrad = ctx.createLinearGradient(115, 530, 260, 790);
+            jarikGrad.addColorStop(0, '#8A5E2B');
+            jarikGrad.addColorStop(0.5, '#C59B48');
+            jarikGrad.addColorStop(1, '#4B3116');
+            ctx.fillStyle = jarikGrad;
+            ctx.beginPath();
+            ctx.roundRect(118, 535, 142, 265, 12);
+            ctx.fill();
+
+            // Motif parang/sogan halus pada jarik pria
+            ctx.strokeStyle = 'rgba(38, 22, 10, 0.45)';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < 12; i++) {
+                ctx.beginPath();
+                ctx.moveTo(122, 550 + i * 22);
+                ctx.bezierCurveTo(165, 540 + i * 22, 205, 565 + i * 22, 255, 552 + i * 22);
+                ctx.stroke();
+            }
+
+            // Keris & Ronce Melati di pinggang kiri belakang
+            ctx.fillStyle = '#9C6B30';
+            ctx.beginPath();
+            ctx.ellipse(98, 495, 32, 12, -0.45, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#FBF9F5';
+            ctx.lineWidth = 6;
+            ctx.setLineDash([5, 4]);
+            ctx.beginPath();
+            ctx.moveTo(82, 488);
+            ctx.quadraticCurveTo(74, 565, 78, 635);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Beskap Beludru Hitam Pria
+            ctx.fillStyle = '#141110';
+            ctx.beginPath();
+            ctx.moveTo(118, 305);
+            ctx.quadraticCurveTo(185, 285, 250, 315);
+            ctx.lineTo(266, 548);
+            ctx.lineTo(106, 548);
+            ctx.closePath();
+            ctx.fill();
+
+            // Sulaman Bordir Emas Mewah pada Beskap Pria
+            ctx.strokeStyle = '#D4AF37';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(148, 305);
+            ctx.lineTo(232, 465);
+            ctx.lineTo(254, 545);
+            ctx.stroke();
+            // Manset lengan bordir emas
+            ctx.fillStyle = '#C5A059';
+            ctx.fillRect(184, 486, 48, 16);
+
+            // Kalung Ronce Melati Pria
+            ctx.strokeStyle = '#FAF6EE';
+            ctx.lineWidth = 7;
+            ctx.setLineDash([6, 4]);
+            ctx.beginPath();
+            ctx.moveTo(160, 298);
+            ctx.quadraticCurveTo(212, 395, 246, 445);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Kepala & Wajah Pria (Profil samping menghadap kanan)
+            ctx.fillStyle = '#DFA984';
+            ctx.beginPath();
+            ctx.ellipse(196, 250, 32, 38, -0.08, 0, Math.PI * 2);
+            ctx.fill();
+            // Blangkon Batik Cokelat Emas
+            const blangkonGrad = ctx.createLinearGradient(152, 200, 235, 240);
+            blangkonGrad.addColorStop(0, '#784E24');
+            blangkonGrad.addColorStop(0.5, '#C59A4B');
+            blangkonGrad.addColorStop(1, '#5A3918');
+            ctx.fillStyle = blangkonGrad;
+            ctx.beginPath();
+            ctx.ellipse(192, 224, 40, 24, -0.15, Math.PI, Math.PI * 2.08);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(152, 232, 12, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 3. MEMPELAI WANITA (Kanan, menghadap kiri tersenyum anggun)
+            // Jarik Batik Sogan Wanita
+            ctx.fillStyle = jarikGrad;
+            ctx.beginPath();
+            ctx.roundRect(306, 535, 136, 265, 10);
+            ctx.fill();
+
+            // Kebaya Beludru Hitam Panjang Wanita
+            ctx.fillStyle = '#120F0E';
+            ctx.beginPath();
+            ctx.moveTo(315, 345);
+            ctx.quadraticCurveTo(368, 330, 422, 352);
+            ctx.lineTo(476, 795);
+            ctx.lineTo(276, 795);
+            ctx.closePath();
+            ctx.fill();
+
+            // Sabuk / Stagen Merah di Pinggang
+            ctx.fillStyle = '#9E1B24';
+            ctx.fillRect(322, 502, 74, 30);
+
+            // Sulaman Bordir Emas Tepi Kebaya & Bros Susun Tiga
+            ctx.strokeStyle = '#D4AF37';
+            ctx.lineWidth = 4.5;
+            ctx.beginPath();
+            ctx.moveTo(334, 355);
+            ctx.lineTo(318, 535);
+            ctx.lineTo(286, 795);
+            ctx.moveTo(382, 355);
+            ctx.lineTo(395, 535);
+            ctx.lineTo(426, 795);
+            ctx.stroke();
+
+            // Bros Emas Susun 3 di Dada
+            ctx.fillStyle = '#D4AF37';
+            [385, 415, 445].forEach((by, idx) => {
+                ctx.beginPath();
+                ctx.arc(356, by, 10 - idx, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Manset Lengan Kebaya Bordir Emas
+            ctx.fillStyle = '#C5A059';
+            ctx.fillRect(396, 532, 44, 15);
+
+            // Ronce Melati Panjang Menjuntai dari Sanggul ke Bahu
+            ctx.strokeStyle = '#FDFBF7';
+            ctx.lineWidth = 8;
+            ctx.setLineDash([6, 4]);
+            ctx.beginPath();
+            ctx.moveTo(410, 265);
+            ctx.quadraticCurveTo(432, 320, 324, 395);
+            ctx.quadraticCurveTo(304, 435, 302, 475);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Sanggul Ukel Tekuk & 7 Cunduk Mentul Emas
+            ctx.fillStyle = '#181311';
+            ctx.beginPath();
+            ctx.ellipse(404, 262, 26, 32, 0.25, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.strokeStyle = '#E5C168';
+            ctx.fillStyle = '#E5C168';
+            ctx.lineWidth = 2;
+            const mentulAngles = [-0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75];
+            mentulAngles.forEach((ang) => {
+                const bx = 374 + Math.sin(ang) * 16;
+                const by = 236 - Math.cos(ang) * 10;
+                const tx = bx + Math.sin(ang) * 34;
+                const ty = by - Math.cos(ang) * 38;
+                ctx.beginPath();
+                ctx.moveTo(bx, by);
+                ctx.lineTo(tx, ty);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(tx, ty, 3.8, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Kepala & Wajah Wanita + Paes Hitam Jawa
+            ctx.fillStyle = '#E6B38E';
+            ctx.beginPath();
+            ctx.ellipse(354, 272, 28, 35, 0.08, 0, Math.PI * 2);
+            ctx.fill();
+            // Paes Hitam Klasik di Dahi
+            ctx.fillStyle = '#141110';
+            ctx.beginPath();
+            ctx.moveTo(328, 256);
+            ctx.quadraticCurveTo(342, 240, 376, 244);
+            ctx.quadraticCurveTo(352, 254, 336, 264);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        // DATA GALERI PORTOFOLIO PENGANTIN KHUSUS ADAT JAWA
+        const galleryData = [
+            {
+                title: 'Paes Ageng Yogyakarta Klasik',
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+                title: 'Solo Putri Klasik Eksklusif',
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+                title: 'Solo Basahan Keraton Surakarta',
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+                title: 'Kebaya Beludru Hitam & Emas',
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+                title: "Jawa Modifikasi Hijab Syar'i",
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+                title: 'Rias Akad Nikah Adat Jawa Anggun',
+                category: 'Adat Jawa',
+                image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80'
+            }
+        ];
+
+        const ADMIN_WA_NUMBER = '6281226250628'; // Nomor WhatsApp Sanggar Rias Lintang
+
+        // FALLBACK BERANTAI UNTUK GAMBAR UTAMA SIGNATURE LOOK
+        function handleHeroImageFallback(imgElement) {
+            const step = parseInt(imgElement.getAttribute('data-fallback-step') || '0', 10);
+            const fallbackSources = ['images%20(4)_2.jpg', 'images (4).jpg'];
+
+            if (step < fallbackSources.length) {
+                imgElement.setAttribute('data-fallback-step', String(step + 1));
+                imgElement.src = fallbackSources[step];
+            } else {
+                imgElement.style.display = 'none';
+                const svgFallback = document.getElementById('javanese-bride-svg-fallback');
+                if (svgFallback) {
+                    svgFallback.classList.remove('hidden');
+                }
+            }
+        }
+
+        // RENDER GALERI PORTOFOLIO ADAT JAWA
+        function renderGallery() {
+            const galleryGrid = document.getElementById('gallery-grid');
+
+            galleryGrid.innerHTML = galleryData.map((item, index) => {
+                return `
+                    <div onclick="openLightbox(${index})" class="group relative rounded-3xl overflow-hidden aspect-[4/5] bg-maroon-900 cursor-pointer shadow-md border border-gold-400/20">
+                        <img src="${item.image}" 
+                             alt="${item.title}"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/421218/D4AF37?text=Pengantin+Adat+Jawa';"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-maroon-950/85 via-maroon-950/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                        <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between text-ivory-50">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold block mb-1">${item.category}</span>
+                                <h3 class="font-serif text-xl font-bold">${item.title}</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-gold-500 text-maroon-950 flex items-center justify-center shrink-0 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // LIGHTBOX GALERI
+        function openLightbox(index) {
+            const item = galleryData[index];
+            if (!item) return;
+            document.getElementById('lightbox-img').src = item.image;
+            document.getElementById('lightbox-cat').textContent = item.category;
+            document.getElementById('lightbox-title').textContent = item.title;
+
+            const waText = `Halo Sanggar Rias Lintang, saya tertarik untuk booking gaya riasan "${item.title}" (${item.category}).`;
+            document.getElementById('lightbox-wa-link').href = `https://wa.me/${ADMIN_WA_NUMBER}?text=${encodeURIComponent(waText)}`;
+
+            const lb = document.getElementById('lightbox-modal');
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox-modal');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        // INISIALISASI SAAT HALAMAN DIMUAT
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGallery();
+
+            // Muat foto Signature Look tersimpan dari localStorage jika pengguna pernah memilih foto JPG
+            try {
+                const savedSignaturePhoto = localStorage.getItem(SIGNATURE_STORAGE_KEY);
+                if (savedSignaturePhoto) {
+                    const imgEl = document.getElementById('signature-look-img');
+                    if (imgEl) {
+                        imgEl.onerror = null;
+                        imgEl.src = savedSignaturePhoto;
+                    }
+                }
+            } catch (err) {
+                // Abaikan error storage
+            }
+        });
+    </script>
+</body>
+</html>
